@@ -285,7 +285,7 @@ span{
 
 .services{
 	min-height: auto;
-	padding-bottom: 7rem;
+	padding-bottom: 13rem;
 }
 .services h2{
 	margin-bottom: 5rem;
@@ -460,49 +460,23 @@ span{
 	html{
 		font-size: 55%;
 	}
-	.home .profession-container{
-		height: 85.8rem;
-	}
-	.home .profession-container .profession-box{
-		right: -12rem;
-		height: 85.8rem;
-	}
-	.home .profession-container .overlay{
-		right: -9rem;
-	}
 }
 @media (max-width:1024px){
-	header{
+	.header{
 		padding: 2rem 3%;
 	}
 	section{
-		padding: 10re 3% 2rem;
-	}
-	.home .profession-container .profession-box{
-		right: -22rem;
-	}
-	.home .profession-container .overlay{
-		right: -15rem;
+		padding: 10rem 3% 2rem;
 	}
 }
 @media (max-width:991px){
 	
-	.navbar a:nth-child(1),
-	.navbar a:nth-child(2){
-		color: var(--main-color);
-	}
 	.navbar a.active::before{
 		background: var(--main-color);
-		opacity: 0.7;
+		opacity: 1;
 	}
 	.home .home-content{
-		max-width: 5rem;
-	}
-	.home .profession-container .profession-box{
-		right: -45rem;
-	}
-	.home .profession-container .overlay{
-		right: -39.5rem;
+		max-width: 50rem;
 	}
 	.home-img img{
 		display: none
@@ -540,8 +514,7 @@ span{
 		box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
 		display: none;
 	}
-
-	.navbar .active{
+	.navbar.active{
 		display: block;
 	}
 	.navbar a{
@@ -560,8 +533,48 @@ span{
 	.navbar a::before {
 		display: none;
 	}
+	.home{
+		padding: 0 1% 2rem;
+		justify-content: center;
+		text-align: center;
+	}
+	.home-content h3{
+		font-size: 2.6rem;
+	}
+	.home-content h1{
+		font-size: 5rem;
+	}
+	.home-content .social-media a{
+		margin: 2.5rem .75rem;
+	}
+	.about{
+		flex-direction: column-reverse;
+		text-align: center;
+	}
+	.services h2,
+	.projects h2{
+		margin-bottom: 3rem
+	}
+	.projects .projects-container{
+		grid-template-columns: repeat(3,1fr);
+	}
 }
-
+@media (max-width: 617px){
+	.projects .projects-container{
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+@media (max-width: 450px){
+	html{
+		font-size: 50%;
+	}
+	.home{
+		padding: 0 3% 0.1rem;
+	}
+	.contact form .input-box input{
+		width: 100%;
+	}
+}
 
 
 
