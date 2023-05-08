@@ -547,10 +547,6 @@ span{
 	.home-content .social-media a{
 		margin: 2.5rem .75rem;
 	}
-	.about{
-		flex-direction: column-reverse;
-		text-align: center;
-	}
 	.services h2,
 	.projects h2{
 		margin-bottom: 3rem
@@ -570,6 +566,25 @@ span{
 	}
 	.home{
 		padding: 0 3% 0.1rem;
+	}
+	.about-col-1 img{
+		width: 46rem;;
+	}
+	.about-col-2{
+		flex-basis: 100%;
+	}
+	.sub-title{
+		text-align: center;
+		padding-top: 5rem;
+		padding-bottom: 3rem;
+		font-size: 3rem;
+	}
+	.projects-layer h4{
+		font-size: 2rem;
+	}
+	.projects-layer p{
+		font-size: 0.9rem;
+		margin: 0.3rem 0 1rem;
 	}
 	.contact form .input-box input{
 		width: 100%;

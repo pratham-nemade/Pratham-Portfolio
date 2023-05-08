@@ -38,5 +38,5 @@ ScrollReveal({
 	delay: 200
 });
 
-ScrollReveal().reveal('.home-content, .heading', { origin : 'top' });
-ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .contact form', { origin : 'bottom' });
+ScrollReveal().reveal('.home-content, .heading , .sub-title', { origin : 'top' });
+ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .contact form , .about-col-1 img', { origin : 'bottom' });
