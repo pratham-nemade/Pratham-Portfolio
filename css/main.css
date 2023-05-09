@@ -568,7 +568,7 @@ span{
 		padding: 0 3% 0.1rem;
 	}
 	.about-col-1 img{
-		width: 46rem;;
+		width: 41rem;;
 	}
 	.about-col-2{
 		flex-basis: 100%;
@@ -580,7 +580,7 @@ span{
 		font-size: 3rem;
 	}
 	.projects-layer h4{
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.projects-layer p{
 		font-size: 0.9rem;
