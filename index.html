@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link rel="stylesheet"  href="css/swiper-bundle.min.css">
+	
+
     <!-- Main CSS -->
 	<link rel="stylesheet" href="css/main.css">
 	
@@ -15,6 +17,7 @@
     <title>Portfolio</title>
 
 	<script src="https://unpkg.com/scrollreveal"></script>
+	<script src="js/slider.js"></script>
   </head>
   <body>
   
@@ -39,7 +42,7 @@
 		<div class="home-content">
 			<h3>Hello, I am</h3>
 			<h1><span>Pratham</span> Nemade</h1>
-			<p>Passionate Skilled, collaborative, and attentive Full Stack Web
+			<p>Passionate Skilled,collaborative, and attentive Full Stack Web
 				Developer specialization in JAVA. I am a learner and explorer
 				constantly seeking better quality, efficiency, and a healthy
 				environment and I enjoy problem-solving and learning from the
@@ -119,9 +122,8 @@
 			<div class="services-box">
 				<i class='bx bxl-java'></i>
 				<h3>Java Developer</h3>
-  				<p>Web design is the creation of websites and pages to 
-  				reflect a company's brand and information and ensure a 
-  				user-friendly experience</p>
+  				<p>A Java Developer is a programmer who designs, develops,
+					 and manages Java-based applications and software</p>
 			</div>
 			<div class="services-box">
 				<i class='bx bx-palette' ></i>
@@ -133,9 +135,8 @@
 			<div class="services-box">
 				<i class='bx bx-code-alt'></i>
 				<h3>Web Developer</h3>
-  				<p>Web design is the creation of websites and pages to 
-  				reflect a company's brand and information and ensure a 
-  				user-friendly experience</p>
+  				<p>A Web Developer is a professional who is responsible
+					for the design and construction of websites.</p>
 			</div>
 		</div>
 	</section>
@@ -143,38 +144,46 @@
 	
 	<!-- -------------------------------- My Projects ----------------------------------------- -->
 	
-	
 	<section class="projects" id="projects">
 		<h2 class="heading">Latest <span>Projects</span></h2>
-		<div class="projects-container">
-			<!-- <div class="projects-box">
-				<img alt="" src="image//shopping.jpg">
-				<div class="projects-layer">
-					<h4>Amazone Clone</h4>
-					<p>This is a clone of amazon.com with complete e-commerce functionalities 
-					like authentication, add to cart, order history.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div> -->
-			<div class="projects-box">
-				<img alt="" src="image//MyntraClone.jpg">
-				<div class="projects-layer">
-					<h4>Myntra  Clone</h4>
-					<p>This is a clone of amazon.com with complete e-commerce functionalities 
-					like authentication, add to cart, order history.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-			<div class="projects-box">
-				<img alt="" src="image//AmazonClone.jpg">
-				<div class="projects-layer">
-					<h4>Amazon Clone</h4>
-					<p>This is a clone of amazon.com with complete e-commerce functionalities 
-					like authentication, add to cart, order history.</p>
-					<a href="#"><i class='bx bx-link-external'></i></a>
-				</div>
-			</div>
-		</div>
+		
+		<div class="container">
+            <div class="project-row">
+                <div class="project-image">
+                    <img src="image//MyntraClone.jpg">
+                </div>
+                <div class="project-des">
+                    <h1 class="title">Myntra Clone</h1>
+                    <p>The project, Myntra Clone is a exact replica 
+                        of original Myntra Shopping website. It is a one 
+                        stop shop for all your fashion and lifestyle needs
+                        . Being India's largest e-commerce store for
+                        fashion and lifestyle products.
+                    </p>
+                    <a href="#">Github</a>
+                    <a href="#">Demo</a>
+                </div>
+            </div>
+			<div class="project-row">
+                <div class="project-image">
+                    <img src="image//AmazonClone.jpg">
+                </div>
+                <div class="project-des">
+                    <h1 class="title">Amazon Clone</h1>
+                    <p>The project, Amazon Clone is a website 
+						that allows people to buy and sell 
+						physical goods, services, and digital 
+						products over the internet rather than at 
+						a brick-and-mortar location. Through an 
+						e-commerce website, a business can process 
+						orders, accept payments, manage shipping and 
+						logistics, and provide customer service.
+                    </p>
+                    <a href="#">Github</a>
+                    <a href="#">Demo</a>
+                </div>
+            </div>
+        </div>
 	</section>
 	
 	<!-- -------------------------------- Contact ----------------------------------------- -->
@@ -240,5 +249,6 @@
 	form.addEventListner("submit",sendEmail)
 
 	</script>
+	<script src="js/swiper-bundle.min.js"></script>
   </body>
 </html>

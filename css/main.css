@@ -12,7 +12,7 @@
 }
 :root {
 	--bg-color:#fdfdfd;
-	--text-color:#333;
+	--text-color: black;
 	--main-color:#a936e3;
 	--white-color:#fdfdfd;
 	--shadow-color:rgba(0,0,0,0.2);
@@ -20,7 +20,6 @@
 html{
 	font-size: 62.5%;
 	overflow-x:hidden;
-	
 }
 body {
 	background: var(--bg-color);
@@ -329,73 +328,45 @@ span{
 }
 
 /* -------------------------------------- Projects ----------------------------------- */
-
-.projects{
-	padding-bottom: 10rem;
+.project-row{
+	padding-top: 3rem;
+	display:flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
 }
-.projects h2{
-	margin-bottom: 4rem;
+.project-image{
+	flex-basis: 30%;
 }
-.projects .projects-container{
-	display: grid;
-	grid-template-columns:repeat(3,1fr);
-	align-items: center;
-	gap:2.5rem;
+.project-image img {
+	width: 15vw;
+	border-radius: 10px;
 }
-.projects-container .projects-box{
-	position: relative;
-	display: flex;
-	border-radius: 2rem;
-	box-shadow: 0 0 1rem rgba(0,0,0,0.1);
-	overflow: hidden;
+.project-des{
+	flex-basis: 70%;
 }
-.projects-box img{
-	width: 100%;
-	transition:0.5s ease;
+.title{
+	font-size:2.5rem;
+	font-weight:700;
+    padding-bottom: 20px;
 }
-.projects-box:hover img{
-	transform:scale(1.1);
+.project-des p{
+	font-size:1.5rem;
 }
-.projects-box .projects-layer{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(rgba(0,0,0,0.1), var(--main-color));
-	color: var(--white-color);
-	display: flex;
-	justify-content:center;
-	align-items: center;
-	flex-direction: column;
+.project-des a{
+    background-color:var(--main-color);
+	padding: 10px 30px;
+	color: white;
+	display:inline-block;
 	text-align: center;
-	padding: 0 4rem;
-	opacity: 0;
-	transition:0.5s ease;
+	margin-top: 20px;
+	margin-left: 1px;
+	border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
 }
-.projects-box:hover .projects-layer{
-	opacity: 1
-}
-.projects-layer h4{
-	font-size: 3rem;
-}
-.projects-layer p{
-	font-size: 1.6rem;
-	margin: 0.3rem 0 1rem;
-}
-
-.projects-layer a{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 5rem;
-	height: 5rem;
-	background: var(--white-color);
-	border-radius: 50%;
-}
-.projects-layer a i {
-	font-size: 2rem;
-	color: #333;
+.project-des a:hover{
+	background-color: transparent;
+	color: var(--main-color);
 }
 
 /* -------------------------------------- Contact ----------------------------------- */
@@ -435,23 +406,6 @@ span{
 .contact form .btn{
 	margin-top: 2rem;
 	cursor: pointer;
-}
-
-/* -------------------------------------- Footer ----------------------------------- */
-
-.footer{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	padding: 2rem 9%;
-	background: var(--main-color); 
-}
-
-.footer-text p{
-	font-size: 1.7rem;
-	color: var(--white-color);
-	margin-left: 50rem;
 }
 
 /* -------------------------------------- BreakPoint ----------------------------------- */
@@ -579,12 +533,22 @@ span{
 		padding-bottom: 3rem;
 		font-size: 3rem;
 	}
-	.projects-layer h4{
-		font-size: 1.5rem;
+	.project-image img{
+		margin-left: 6rem;
+		width: 30rem;
 	}
-	.projects-layer p{
-		font-size: 0.9rem;
-		margin: 0.3rem 0 1rem;
+	.project-des{
+		text-align: justify;
+		flex-basis: 100%;
+	}
+	.project-des h1{
+		padding-top: 2rem;
+		text-align: center;
+	}
+	.project-des a{
+		margin-left: 4rem;
+		text-align: center;
+		margin-bottom: 3rem;
 	}
 	.contact form .input-box input{
 		width: 100%;

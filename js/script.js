@@ -39,4 +39,4 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading , .sub-title', { origin : 'top' });
-ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .contact form , .about-col-1 img', { origin : 'bottom' });
+ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .contact form , .about-col-1 img, .project-row', { origin : 'bottom' });
