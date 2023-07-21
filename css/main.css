@@ -11,7 +11,7 @@
 	font-family: 'Poppins', sans-serif;
 }
 :root {
-	--bg-color:black;
+	--bg-color:rgb(21, 20, 20);
 	--text-color: white;
 	--main-color:#a936e3;
 	--white-color:#fdfdfd;
@@ -30,7 +30,7 @@ body {
 	top: 0;
 	left: 0;
 	width:100%;
-	padding: 2rem 7%;
+	padding: 1.5rem 7% ;
 	background: transparent;
 	display: flex;
 	align-items:center;
@@ -38,41 +38,63 @@ body {
 	transition:0.5s;
 }
 .header.sticky{
-	background: var(--bg-color);
+	background:var(--bg-color);
  	box-shadow: 0.1rem 0.1rem var(--shadow-color);
 }
 .logo{
-	font-size: 2.8rem;
+	font-size: 2.2rem;
 	color: var(--main-color);
 	font-weight: 600;
 	cursor: default;
-	margin-right: auto;
+	margin-right:390px;
+}
+.navbar{
+	border: 1px solid rgb(71, 69, 69);
+	padding: 10px;
+	border-radius: 10px;
+	background-color: black;
 }
 .navbar a{
 	position:relative;
-	font-size: 1.7rem;
+	font-size: 14px;
 	color: var(--text-color);
-	font-weight: 600;
-	margin-right: 3.5rem;
+	margin-right: 2.5rem;
 }
 .header.sticky .navbar a{
 	color: var(--text-color);
-}
-.header.sticky .navbar a.active{
-	color: var(--main-color);
 }
 .navbar a.active::before {
 	content: '';
 	position: absolute;
 	left:0;
-	width: 100%;
+	width: 70%;
 	height:0.2rem;
 	background:var(--main-color);
-	bottom:-6px;
+	bottom:-4px;
 }
 .header.sticky .navbar a::before{
 	background:var(--main-color);
 	opacity: 0.7;
+}
+.social-media{
+	margin-left: 355px;
+}
+.social-media a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.2rem;
+	height: 3.2rem;
+	border: 1px solid  var(--main-color);
+	border-radius: 50%;
+	font-size: 2rem;
+	color:  white;
+	margin-left: 10px;
+	transition:0.5s ease;
+}
+.social-media a:hover {
+	background:var(--main-color);
+	color: var(--white-color);
 }
 #menu-icon{
 	font-size: 3.6rem;
@@ -108,24 +130,7 @@ section{
 .home-content p{
 	font-size: 1.6rem;
 }
-.home-content .social-media a{
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	width: 4rem;
-	height: 4rem;
-	border: 0.2rem solid  var(--main-color);
-	border-radius: 50%;
-	box-shadow: 0 0.2rem 0.5rem var(--shadow-color);
-	font-size: 2rem;
-	color:  white;
-	margin: 2.5rem 1.5rem 3rem 0;
-	transition:0.5s ease;
-}
-.home-content .social-media a:hover {
-	background:var(--main-color);
-	color: var(--white-color);
-}
+
 .btn{
 	display: inline-block;
 	padding: 1.2rem 2.8rem;
@@ -271,52 +276,7 @@ span{
 	font-size: 4.5rem;
 	text-align: center;
 }
-/* -------------------------------------- Services ----------------------------------- */
-
-.services{
-	min-height: auto;
-	padding-bottom: 13rem;
-}
-.services h2{
-	margin-bottom: 5rem;
-}
-.services .services-container{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 2rem;
-}
-.services-container .services-box{
-	flex: 1 1 30rem;
-	background: var(--bg-color);
-	padding: 3rem 2rem 4rem;
-	border-radius: 2rem;
-	box-shadow: 0.1rem 0.2rem var(--shadow-color);
-	text-align: center;
-	border-top: 0.6rem solid var(--main-color);
-	border-bottom: 0.6rem solid var(--main-color);
-	transition:0.5s ease;
-}
-.services-container .services-box:hover{
-	box-shadow: 0.1 rem 2rem var(--shadow-color);
-	transform:scale(1.02);
-}
-.services-box i{
-	font-size: 7rem;
-	color: var(--main-color);
-}
-.services-box h3{
- 	font-size: 2.6rem;
- 	transition:0.5s ease;
-}
-.services-box:hover h3{
-	color: var(--main-color);
-}
-.services-box p{
-	font-size: 1.6rem;
-	margin: 1rem 0 3rem;
-}
+/* -------------------------------------- Skills----------------------------------- */
 
 /* -------------------------------------- Projects ----------------------------------- */
 
@@ -363,18 +323,6 @@ h3 {
 	padding: 10px 15px; 
 	margin-top: 20px ;
 }
-.project-tools p {
-	background: linear-gradient(150deg,
-			rgba(29, 228, 255, 0.81) -6.94%,
-			rgba(59, 83, 168, 0.9) 97.22%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-
-	padding-bottom: 0.3rem;
-
-	font-family: "Satoshi 700";
-}
 
 .project-image-box {
 	position: relative;
@@ -397,49 +345,7 @@ h3 {
 	transform: none;
 }
 
-/* .project-row{
-	padding-top: 3rem;
-	display:flex;
-	justify-content: space-between;
-	flex-wrap:wrap;
-}
-.project-image{
-	flex-basis: 30%;
-}
-.project-image img {
-	width: 15vw;
-	border-radius: 10px;
-}
-.project-des{
-	flex-basis: 70%;
-}
-.title{
-	font-size:2.5rem;
-	font-weight:700;
-    padding-bottom: 20px;
-}
-.project-des p{
-	font-size:1.5rem;
-}
-.project-des a{
-    background-color:var(--main-color);
-	padding: 10px 30px;
-	color: white;
-	display:inline-block;
-	text-align: center;
-	margin-top: 20px;
-	margin-left: 1px;
-	border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-}
-.project-des a:hover{
-	background-color: transparent;
-	color: var(--main-color);
-} */
-
 /* -------------------------------------- Contact ----------------------------------- */
-
 
 .contact h2{
 	margin-bottom: 3rem;
@@ -506,27 +412,13 @@ h3 {
 	.home-img img{
 		display: none
 	}
-	.services,
-	.projects{
-		padding-bottom: 7rem;
-	}
 	.contact{
 		min-height: auto;
-	}
-	.footer{
-		padding: 2rem 3%;
 	}
 }
 @media (max-width:768px){
 	#menu-icon{
 		display: block;
-	}
-	#darkmode-icon{
-		position: absolute;
-		right: 7rem;
-		font-size: 2.6rem;
-		color:var(--text-color);
-		margin-bottom: 0.1rem;
 	}
 	.navbar{
 		position: absolute;
@@ -572,18 +464,6 @@ h3 {
 	.home-content .social-media a{
 		margin: 2.5rem .75rem;
 	}
-	.services h2,
-	.projects h2{
-		margin-bottom: 3rem
-	}
-	.projects .projects-container{
-		grid-template-columns: repeat(3,1fr);
-	}
-}
-@media (max-width: 617px){
-	.projects .projects-container{
-		grid-template-columns: repeat(2,1fr);
-	}
 }
 @media (max-width: 450px){
 	html{
@@ -604,43 +484,12 @@ h3 {
 		padding-bottom: 3rem;
 		font-size: 3rem;
 	}
-	.project-image img{
-		margin-left: 6rem;
-		width: 30rem;
-	}
-	.project-des{
-		text-align: justify;
-		flex-basis: 100%;
-	}
-	.project-des h1{
-		padding-top: 2rem;
-		text-align: center;
-	}
-	.project-des a{
-		margin-left: 4rem;
-		text-align: center;
-		margin-bottom: 3rem;
-	}
 	.contact form .input-box input{
 		width: 100%;
 	}
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*---------------------------- Meadia Query For Project Sestion -------------------------------- */
 
 @media screen and (min-width: 720px) {
 	.featured-projects-box {
