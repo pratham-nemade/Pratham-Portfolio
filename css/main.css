@@ -47,6 +47,7 @@ body {
 	font-weight: 600;
 	cursor: default;
 	margin-right:390px;
+	margin-top: 10px;
 }
 .navbar{
 	border: 1px solid rgb(71, 69, 69);
@@ -154,9 +155,12 @@ section{
 	margin-left: 220px;
 	border-radius: 4%;
 }
-
 span{
 	color: var(--main-color);
+}
+.heading{
+	font-size: 3.5rem;
+	text-align: center;
 }
 
 /* -------------------------------------- About ----------------------------------- */
@@ -190,94 +194,89 @@ span{
 .about-col-2 p{
 	font-size:1.5rem;
 }
-.tab-titles{
+.about-body{
+	width: 100%;
+	min-height: 100vh;
+	background-color: black;
 	display: flex;
-	margin: 20px 0 25px;
-	color: var(--text-color);
+	justify-content: center;
+	align-items:center;
 }
-.tab-links{
-	margin-right: 50px;
-	font-size:20px;
-	font-weight: 700;
-	cursor: pointer;
+.container-1{
+	width: 100%;
+	padding: 35px 10%;
+}
+.container-1{
+	padding-right: calc(10% - 30px);
+}
+main.row-1{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-column-gap: 20px;
+}
+.col header.title{
+	color: #a936e3;
+	padding:0 0 20px 30px;
+}
+.col .contents{
+	padding: 0px 30px;
+	border-left: 2px solid #bababa;
+}
+.col .contents .box{
 	position: relative;
+	padding: 20px;
+	border: 1px solid #eaeaea;
+	background-color:black;
+	cursor: pointer;
+	transition: all 0.4s;
+	margin-bottom: 20px;
 }
-.tab-links::after {
-	content:"";
-	width: 0;
-	height:3px;
-	background: var(--main-color);
+.col .contents .box:hover{
+	box-shadow: 0px 3px 12px 0px #ccc;
+}
+.col .contents .box::before{
+	content: "";
 	position: absolute;
-	left:0;
-	bottom:-8px;	
-	transition:0.5s;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	right:calc(100% + 22px);
+	top: -2px;
+	background-color: white;
+	border: 2px solid white;
 }
-.tab-links.active-link::after{
-	width: 50%;
+.box h4{
+	position: relative;
+	color: #a936e3;
 }
-.tab-contents ul li{
-	list-style:none;
-	margin: 10px 0;
-	font-size: 18px;
-	font-weight: 500;
-}
-.tab-contents ul li span {
-	color: var(--main-color);
-	font-size: 20px;
-	font-weight: 700;
-}
-.tab-contents{
-	display: none;
-}
-.tab-contents.active-tab{
-	display:block;
-}
-.tab-contents .frontend{
-	padding-left: 35px;
-}
-.tab-contents h3{
-	font-size:18px;
-	text-align: center;
-}
-.tab-contents .logos{
-	float: left;
-	width: 100px;
-	padding-top: 20px;
-}
-.tab-contents .logos .logo-img{
-	text-align: center;
-	font-size:13px;
-	font-weight: 580;
-}
-.tab-contents .logos img{
-	width: 43px;
-}
-.tab-contents .backend h3{
-	padding-top:40px;
-	text-align: center;
-	padding-left: 29px;
-}
-.tab-contents .backend{
-	padding-top:70px;
-}
-.tab-contents .tech h3{
-	padding-top:40px;
-	text-align: center;
-	padding-left: 29px;
-}
-.tab-contents .tech{
-	padding-top:70px;
-}
-.tab-contents .tech .logos{
-	padding-left: 280px;
-}
-
-.heading{
-	font-size: 4.5rem;
-	text-align: center;
+@media (max-width:768px ) {
+	main.row-1{
+		grid-template-columns: 1fr;
+	}
+	.row .col:nth-child(2){
+		margin-top: 30px;
+	}
 }
 /* -------------------------------------- Skills----------------------------------- */
-
+.tech{
+	margin: 50px 100px;
+	background-color:rgb(179, 82, 21);
+	width: 20%;
+	display: flex;
+	gap: 50px;
+}
+.tech h2{
+	font-size: 2rem;
+	margin-left: -15px;
+}
+.tech h3{
+	font-size: 2rem;
+	margin-left: 0px;
+}
+.tech img{
+	width: 80px;
+	margin: 20px 0;
+}
 /* -------------------------------------- Projects ----------------------------------- */
 
 .featured-projects-box,
