@@ -11,9 +11,9 @@
 	font-family: 'Poppins', sans-serif;
 }
 :root {
-	--bg-color:rgb(21, 20, 20);
+	--bg-color:white;
 	--text-color: white;
-	--main-color:#a936e3;
+	--main-color: #ffbf00;
 	--white-color:#fdfdfd;
 	--shadow-color:rgba(0,0,0,0.2);
 }
@@ -42,11 +42,11 @@ body {
  	box-shadow: 0.1rem 0.1rem var(--shadow-color);
 }
 .logo{
-	font-size: 2.2rem;
-	color: var(--main-color);
-	font-weight: 600;
-	cursor: default;
-	margin-right:390px;
+	font-size: 2.5rem;
+	color: #000000;
+	font-weight: 700;
+	cursor:pointer;
+	margin-right:380px;
 	margin-top: 10px;
 }
 .navbar{
@@ -86,16 +86,18 @@ body {
 	align-items: center;
 	width: 3.2rem;
 	height: 3.2rem;
-	border: 1px solid  var(--main-color);
+	
 	border-radius: 50%;
 	font-size: 2rem;
 	color:  white;
 	margin-left: 10px;
 	transition:0.5s ease;
+	background-color: #ffbf00;
 }
 .social-media a:hover {
-	background:var(--main-color);
+	background:black;
 	color: var(--white-color);
+	
 }
 #menu-icon{
 	font-size: 3.6rem;
@@ -110,28 +112,64 @@ section{
 }
 .home{
 	display: flex;
-	align-items:center;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	background: #FFF7DF;
+}
+.home:after{
+	content: "";
+	width: 1000px;
+	height: 1000px;
+	border-radius: 50%;
+	position: absolute;
+	top: -200px;
+	left: -200px;
+	background-color: #ffffff;
+	z-index: -1;
 }
 .home .home-content{
 	max-width: 44rem;
+	margin-top: 120px;
 }
 .home-content h3{
 	font-size: 3.2rem;
+	color: #000000;
 	font-weight: 700;
-	line-height: 0.3;
+	line-height: 0.8;
 }
 .home-content h1{
 	font-size: 4.5rem;
 	font-weight: 700;
 	margin-bottom: 3rem;
+	color: #000000;
 }
 .home-content h1 span{
 	color:var(--main-color) 
 }
 .home-content p{
 	font-size: 1.6rem;
+	text-align: justify;
+	color: #000000;
+	margin-bottom: 20px;
 }
-
+.home img{
+	width: 320px;
+	height: 500px;
+	margin-left: 450px;
+	margin-top: 50px;
+	position: relative;
+	z-index: 10;
+}
+.img-shadow{
+	width: 21.3%;
+	height: 66%;
+	background-color: #FFF7DF;
+	position: absolute;
+	margin: 68px 0px 0 908px ;
+	border: 6px solid black;
+	z-index: 5;
+}
 .btn{
 	display: inline-block;
 	padding: 1.2rem 2.8rem;
@@ -141,7 +179,7 @@ section{
 	font-size: 1.6rem;
 	color: var(--white-color);
 	letter-spacing: 0.1rem;
-	font-weight: 600;
+	font-weight: 700;
 	border: 0.2rem solid  transparent;
 	transition:0.5s ease;
 }
@@ -161,8 +199,8 @@ span{
 .heading{
 	font-size: 3.5rem;
 	text-align: center;
+	color: #000000;
 }
-
 /* -------------------------------------- About ----------------------------------- */
 .row{
 	display:flex;
@@ -182,6 +220,14 @@ span{
 }
 .about-col-2{
 	flex-basis: 46%;
+}
+.about-col-2 h1{
+	color: #000000;
+}
+.about-col-2 p{
+	color: #000000;
+	font-weight: 500;
+	text-align: justify;
 }
 .sub-title{
 	font-size:4.5rem;
@@ -580,12 +626,26 @@ h3 {
 		margin: 2.5rem .75rem;
 	}
 }
-@media (max-width: 450px){
+@media (max-width: 480px){
 	html{
 		font-size: 50%;
 	}
+	.social-media{
+		margin-left: -300px;
+		margin-right: 10px;
+		margin-top: 10px;
+	}
+	#menu-icon{
+		margin-top: 5px;
+	}
 	.home{
 		padding: 0 3% 0.1rem;
+	}
+	.home:after{
+		background-color: #a936e3;
+	}
+	.hexagon-container{
+		display: none;
 	}
 	.about-col-1 img{
 		width: 41rem;;
