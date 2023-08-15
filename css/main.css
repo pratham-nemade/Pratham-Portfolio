@@ -86,7 +86,6 @@ body {
 	align-items: center;
 	width: 3.2rem;
 	height: 3.2rem;
-	
 	border-radius: 50%;
 	font-size: 2rem;
 	color:  white;
@@ -97,7 +96,6 @@ body {
 .social-media a:hover {
 	background:black;
 	color: var(--white-color);
-	
 }
 #menu-icon{
 	font-size: 3.6rem;
@@ -511,12 +509,20 @@ h3 {
 .contact h2{
 	margin-bottom: 3rem;
 }
+.contact-container{
+	width: 500px;
+	height: 500px;
+	background: black;
+	box-shadow: 1px solid #888686;
+}
+.contact-container .content{
+	padding: 50px;
+}
 .contact form {
-	max-width: 70rem;
-	margin:1rem auto;
+	max-width:100rem;
+	margin-left: 30rem;
 	text-align: center;
 	margin-bottom: 3rem;
-	
 }
 .contact form .input-box{
 	display: flex;
@@ -544,6 +550,37 @@ h3 {
 .contact form .btn{
 	margin-top: 2rem;
 	cursor: pointer;
+}
+/* ----------------------------Footer---------------------------- */
+.footer{
+	display: flex;
+	background-color: #000000;
+	min-height: 10px;
+}
+.social-icons{
+	margin-top: -80px;
+}
+.social-icons a{
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.2rem;
+	height: 3.2rem;
+	border-radius: 50%;
+	font-size: 2rem;
+	color:  white;
+	margin-left: 10px;
+	transition:0.5s ease;
+	background-color: #ffbf00;
+}
+.social-icons a:hover {
+	background:rgb(255, 255, 255);
+	color:black;
+}
+.copyright p{
+	margin-top: -75px;
+	font-size: 13px;
+	margin-left: 910px;
 }
 
 /* -------------------------------------- BreakPoint ----------------------------------- */
