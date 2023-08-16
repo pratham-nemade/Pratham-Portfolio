@@ -39,4 +39,6 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading , .sub-title', { origin : 'top' });
-ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .contact form , .about-col-1 img, .project-row', { origin : 'bottom' });
+ScrollReveal().reveal('.home-img img, .services-container , .projects-box , .about-col-1 img, .project-row', { origin : 'bottom' });
+ScrollReveal().reveal('.contact-info , .project1 , .project3', { origin : 'left' });
+ScrollReveal().reveal('.contact_form , .project2', { origin : 'right' });
