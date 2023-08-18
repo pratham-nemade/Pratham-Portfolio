@@ -11,10 +11,9 @@
 	font-family: 'Poppins', sans-serif;
 }
 :root {
-	--bg-color:white;
-	--text-color: white;
+	--text-color: black;
 	--main-color: #ffbf00;
-	--white-color:#fdfdfd;
+	--white-color: white;
 	--shadow-color:rgba(0,0,0,0.2);
 }
 html{
@@ -22,7 +21,6 @@ html{
 	overflow-x:hidden;
 }
 body {
-	background: var(--bg-color);
 	color: var(--text-color);
 }
 .header{
@@ -243,160 +241,59 @@ span{
 .about-col-2 p{
 	font-size:1.5rem;
 }
-
-.Timeline-Section{
-	display: flex;
+.eduExp{
+	margin-top: 50px;
 	color: #000000;
-	margin-bottom:-100px;
 }
-.timelineEdu{
-	position: relative;
-	margin: 50px auto;
+.eduExp h1{
+	text-align: center;
+	font-size: 30px;
+	padding: 35px 0 20px;
 }
-.timelineEdu h1{
-	margin: 0px 0 15px 50px;
-	color: #a936e3	;
-	font-size: 22px;
+.eduExp p{
+	text-align: center;
+	font-size: 15px;
+	font-weight: 500;
+	padding: 0 350px 50px;
 }
-.container-1{
-	padding: 10px 50px;
-	position: relative;
-	width: 100%;
-}
-.text-box{
-	padding: 15px 20px;
-	background: #888686;
-	position: relative;
-	border-radius: 6px;
-	font-size: 12px;
-	width: 900;
-}
-.text-box p{
-	font-size: 10px
-}
-.container-1 img{
-	position: absolute;
-	width: 15px;
-	height: 15px;
-	border-radius: 50%;
-	right: -10px;
-	top: 25px;
-	z-index: 10;
-}
-.timelineEdu::after{
-	content: "";
-	position: absolute;
-	width: 4px;
-	height: 72%;
-	background-color: #fdfdfd;
-	top: 0;
-	left: 100%;
-	margin-left: 0px;
-	margin-top: 60px;
-}
-.left-container-arrow{
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 15px;
-	z-index: 1;
-	border-top: 8px solid transparent;
-	border-bottom:  8px solid transparent;
-	border-left: 12px solid #888686;
-	right: -12px;
-}
-.right-container-arrow{
-	height: 0;
-	width: 0;
-	position: absolute;
-	top: 15px;
-	z-index: 1;
-	border-top: 8px solid transparent;
-	border-bottom:  8px solid transparent;
-	border-right: 12px solid #888686 ;
-	left: -12px;
-}
-.timelineExp{
-	position: relative;
-	margin: 50px auto;
-}
-.timelineExp h1{
-	margin: 0px 0 15px 387px;
-	color: #a936e3	;
-	font-size: 22px;
-}
-
-
-
-/* .about-body{
-	width: 100%;
-	min-height: 100vh;
+.eduExp-container{
 	display: flex;
-	justify-content: center;
-	align-items:center;
+	padding-bottom: 50px;
 }
-.container-1{
-	width: 100%;
-	padding: 35px 10%;
-}
-.container-1{
-	padding-right: calc(10% - 30px);
-}
-.row-1{
-	
-	margin: -200px;
-	margin-top: -250px;
-}
-main.row-1{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-column-gap: 20px;
-}
-.col header.title{
-	color: #a936e3;
-	padding:0 0 20px 30px;
-}
-.col .contents{
-	padding: 0px 30px;
-	border-left: 2px solid #bababa;
-}
-.col .contents .box{
-	position: relative;
+.eduExp-container .education{
+	background-color:#FFF7DF;
+	display:flex ;
 	padding: 20px;
-	border: 1px solid #eaeaea;
-	background-color:black;
-	cursor: pointer;
-	transition: all 0.4s;
-	margin-bottom: 20px;
+	margin: 0 75px;
 }
-.col .contents .box:hover{
-	box-shadow: 0px 3px 12px 0px #ccc;
+.eduExp-container .experience{
+	background-color:#FFF7DF;
+	display:flex ;
+	padding: 20px;
 }
-.col .contents .box::before{
-	content: "";
-	position: absolute;
-	width: 10px;
-	height: 10px;
+.eduExp-container h2{
+	font-size: 18px;
+	padding-top: 10px;
+}
+.eduExp-container .date{
+	display: flex;
+}
+.eduExp-container i{
+	font-size: 33px;
+	background-color:var(--main-color) ;
+	color: black; 	
 	border-radius: 50%;
-	right:calc(100% + 25px);
-	top: -2px;
-	background-color: white;
-	border: 2px solid white;
+	padding: 7px;
+	margin-left: 20px;
 }
-.box h4{
-	position: relative;
-	color: #a936e3;
+.eduExp-container p{
+	font-size: 15px;
+	font-weight: 600;
+	padding: 2px 10px 0;
+	margin: 11px 0 10px -5px;
+	background-color: var(--main-color);
 }
-@media (max-width:768px ) {
-	main.row-1{
-		grid-template-columns: 1fr;
-		width: 120%;
-		margin:0;
-	}
-	.row .col:nth-child(2){
-		margin-top: 30px;
-	}
-} */
+
 /* -------------------------------------- Skills----------------------------------- */
 .skills{
 	color: #000000;
@@ -417,10 +314,10 @@ main.row-1{
 .skills-container .skills img{
 	width:60px;
 	margin: 25px 30px 10px;
-	cursor: pointer;
 }
 .skills-container .skills div{
 	transition: transform 0.3s ease;
+	cursor: pointer;
 }
 .skills-container .skills div:hover{
 	transform: scale(1.1) translateY(-10px);
@@ -649,10 +546,10 @@ h3 {
 .footer{
 	display: flex;
 	background-color: #000000;
-	min-height:0;
 }
 .social-icons{
-	margin-top: -80px;
+	margin-left: 95px;
+	padding: 20px 0;
 }
 .social-icons a{
 	display: inline-flex;
@@ -672,9 +569,9 @@ h3 {
 	color:black;
 }
 .copyright p{
-	margin-top: -75px;
 	font-size: 13px;
 	margin-left: 880px;
+	padding: 20px 0;
 }
 .copyright a{
 	font-size: 15px;
