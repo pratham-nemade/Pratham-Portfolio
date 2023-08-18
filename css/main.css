@@ -417,9 +417,15 @@ main.row-1{
 .skills-container .skills img{
 	width:60px;
 	margin: 25px 30px 10px;
+	cursor: pointer;
+}
+.skills-container .skills div{
+	transition: transform 0.3s ease;
+}
+.skills-container .skills div:hover{
+	transform: scale(1.1) translateY(-10px);
 }
 .language{
-	background-color: #a936e3;
 	padding: 20px;
 	margin-left: 80px;
 	width: 600px;
@@ -428,7 +434,37 @@ main.row-1{
 	font-size: 30px;
 }
 .language .title p{
-	font-size: 20px;
+	font-size: 15px;
+}
+.language-container{
+	display: flex;
+	margin-top: 30px;
+}
+.language-container .english , .hindi {
+	width: 500px;
+	background-color: var(--white-color);
+	padding: 12px 18px;
+	display: flex;
+	border-radius: 10px;
+	margin-right: 20px;
+	cursor: pointer;
+	transition: transform 0.3s ease;
+}
+.language-container .english:hover , .hindi:hover{
+	transform: scale(1.1) translateY(-1px);
+}
+.language-container .english .count , .hindi .count{
+	height: 50px;
+	width: 50px;
+	background-color: var(--main-color);
+	padding: 13px 10px;
+	border-radius: 50%;
+	font-size: 15px;
+	font-weight: 700;
+}
+.language-container .english h1, .hindi h1{
+	margin: 12px 50px 0 30px;
+	font-size: 17px;
 }
 /* --------------------------------------Hire me ------------------------------------ */
 

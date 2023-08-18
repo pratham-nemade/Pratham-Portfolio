@@ -40,5 +40,5 @@ ScrollReveal({
 
 ScrollReveal().reveal('.home-content , .heading , .sub-title', { origin : 'top' });
 ScrollReveal().reveal('.about-col-1 img , .about-col-1 .frame , .img-shadow , .home img', { origin : 'bottom' });
-ScrollReveal().reveal('.contact-info , .project1 , .project3', { origin : 'left' });
-ScrollReveal().reveal('.contact_form , .project2', { origin : 'right' });
+ScrollReveal().reveal('.contact-info , .project1 , .project3 , .skills-container .skills', { origin : 'left' });
+ScrollReveal().reveal('.contact_form , .project2, .skills-container .language', { origin : 'right' });
