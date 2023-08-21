@@ -1,0 +1,23 @@
+.image-container {
+    position: relative; /* Container needs to be positioned */
+    width: 100%; /* Set a width for the container */
+    height: auto; /* Height will adjust based on content */
+  }
+  
+  .top-image {
+    width: 100%; /* Set the width of the top image */
+    display: block; /* Ensure it's a block-level element */
+  }
+  
+  .bottom-image {
+    position: absolute; /* Position the bottom images absolutely */
+    bottom: 0; /* Place the bottom images at the bottom of the container */
+    width: 50%; /* Set the width of the bottom images (half of container) */
+  }
+  
+  /* If you want spacing between the bottom images */
+  .bottom-image + .bottom-image {
+    left: 50%; /* Position the second bottom image at the right half */
+    transform: translateX(-50%); /* Center it horizontally */
+  }
+  
