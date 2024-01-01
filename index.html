@@ -106,7 +106,6 @@
 		</div>
 	</section>
 	
-	
 	<!-- -------------------------------- Skills ----------------------------------------- -->
 	
 	<section class="skills" id="skills">
@@ -295,12 +294,7 @@
 			<p>Made with ❤️ and lots of ☕ © <a href="#home">Pratham Nemade</a></p>	
 		</div>
 	</div>
-
-
-
-
 	<script src = "js\script.js"></script>
-	
 	<script type="text/javascript">
 	
 	var tablinks = document.getElementsByClassName("tab-links");
@@ -316,33 +310,6 @@
 		event.currentTarget.classList.add("active-link");
 		document.getElementById(tabname).classList.add("active-tab");
 	}
-	</script>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-	<script>
-		const form = document.querySelector(".contact_form");
-
-		function sendEmail(e){
-			e.preventDefault();
-			
-			const name = document.querySelector(".fullname"),
-				  email = document.querySelector(".email"),
-				  mobilrNo = document.querySelector(".mobileNo"),
-			 	  subject = document.querySelector(".subject"),
-				  message = document.querySelector(".message");
-
-		Email.send({
-			SecureToken : " b33e33f3-6f37-4fd3-8444-aab7eea75711",
-			To : 'pnemade1916@gmail.com',
-			From : email.value,
-			Subject : "This is the subject",
-			Body : message.value
-		}).then(
-		message => alert(message)
-		);
-	}
-
-	form.addEventListner("submit",sendEmail)
-
 	</script>
   </body>
 </html>

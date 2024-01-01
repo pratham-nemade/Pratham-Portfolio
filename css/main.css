@@ -507,6 +507,7 @@ span{
 /* ----------------------------Footer---------------------------- */
 .footer{
 	display: flex;
+	justify-content: space-between;
 	background-color: var(--black-color);
 	color: var(--white-color);
 }
@@ -523,7 +524,7 @@ span{
 	border-radius: 50%;
 	font-size: 2rem;
 	color:  var(--white-color);
-	margin-left: 10px;
+	margin-right: 10px;
 	transition:0.5s ease;
 	background-color: var(--main-color);
 }
@@ -533,7 +534,7 @@ span{
 }
 .copyright p{
 	font-size: 13px;
-	margin-left: 880px;
+	margin-right: 113px;
 	padding: 20px 0;
 }
 .copyright a{
