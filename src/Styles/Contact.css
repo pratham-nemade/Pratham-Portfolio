@@ -1,0 +1,129 @@
+#contact{
+    padding: 0 8% 5rem;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-info {
+    background: var(--white-color);
+    padding: 30px;
+    width: 400px;
+    box-shadow: 0 3px 10px 0 rgba(38, 59, 94, .1);
+}
+
+.contact-info h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 15px;
+    text-align: justify;
+}
+
+.contact-info ul {
+    margin-top: 30px;
+    list-style: none;
+}
+
+.contact-info li {
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+}
+
+.contact-info li i {
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+    color: var(--white-color);
+    background-color: var(--main-color);
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.contact-info li i:hover {
+    color: var(--white-color);
+    background-color: var(--black-color);
+}
+
+.contact-info li span {
+    
+    padding-left: 20px;
+    color: var(--black-color);
+}
+
+.contact-info li+li {
+    padding-top: 15px;
+}
+.media1{
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#contact form {
+    width: 700px;
+}
+
+#contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#contact form .input-box input,
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    background: var(--bg-color);
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    border: none;
+}
+
+#contact form .input-box input {
+    width: calc(50% - 0.5%);
+}
+
+#contact form textarea {
+    resize: none;
+}
+
+#contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1200px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #contact form {
+        width: 90%;
+        margin-top: 2rem;
+    }
+    .contact-info {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #contact form .input-box input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #contact{
+        padding: 0 4% 2rem;
+    }
+}
