@@ -12,6 +12,24 @@ const projects = [
       techStack: "Frontend : HTML, CSS, Bootstrap, Sass",
       links: { github: "https://github.com/pratham1916/Time-Clone", live: "https://time-clone.netlify.app/" },
     },
+    {
+      id: 2,
+      image: time,
+      title: "Time Clone",
+      description: `The Time Clone project is a pixel-perfect replica of Time.com, focusing on crafting a user interface that mirrors the original site's aesthetics.`,
+      features: `\Time Clone has advanced responsiveness for seamless viewing across devices.`,
+      techStack: "Frontend : HTML, CSS, Bootstrap, Sass",
+      links: { github: "https://github.com/pratham1916/Time-Clone", live: "https://time-clone.netlify.app/" },
+    },
+    {
+      id: 3,
+      image: time,
+      title: "Time Clone",
+      description: `The Time Clone project is a pixel-perfect replica of Time.com, focusing on crafting a user interface that mirrors the original site's aesthetics.`,
+      features: `\Time Clone has advanced responsiveness for seamless viewing across devices.`,
+      techStack: "Frontend : HTML, CSS, Bootstrap, Sass",
+      links: { github: "https://github.com/pratham1916/Time-Clone", live: "https://time-clone.netlify.app/" },
+    },
   ];
   function Project() {
     return (
