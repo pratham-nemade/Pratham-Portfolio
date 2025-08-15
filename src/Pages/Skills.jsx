@@ -1,54 +1,114 @@
-import React from 'react';
-import '../Styles/Skills.css';
-import html from "../Images/html.png";
-import css from "../Images/css.png";
-import sass from "../Images/sass.png";
-import bootstrap from "../Images/bootstrap.png";
-import chakra from "../Images/chakraUi.svg";
-import js from "../Images/js.png";
-import react from "../Images/reactjs.png";
-import redux from "../Images/redux.png";
-import typescript from "../Images/typescript.png";
-import node from "../Images/nodejs.png";
-import express from "../Images/express.png";
-import sql from "../Images/sql.png";
-import mongodb from "../Images/mongoDB.png";
-import github from "../Images/github.png";
-import npm from "../Images/npm.png";
-import vercel from "../Images/vercel.svg";
+import { useState, useMemo } from 'react';
+import { useDarkMode } from '../context/DarkModeContext';
+import { Tooltip } from 'antd';
+import html from "../images/html.png";
+import css from "../images/css.png";
+import tailwind from "../images/tailwind.png";
+import antd from "../images/ant-design.svg";
+import shadcn from "../images/shadcn.png";
+import js from "../images/js.png";
+import react from "../images/reactjs.png";
+import redux from "../images/redux.png";
+import typescript from "../images/typescript.png";
+import next from "../images/nextjs.svg";
+import node from "../images/nodejs.png";
+import express from "../images/express.png";
+import mongodb from "../images/mongoDB.png";
+import github from "../images/github.png";
+import bitbucket from "../images/bitbucket.svg";
+import npm from "../images/npm.png";
+import postman from "../images/postman.svg";
+import socket from "../images/socket-io.svg";
+import docker from "../images/docker.svg";
+import aws from "../images/aws.svg";
+import jira from "../images/jira.svg";
 
-function Skills() {
+const Skills = () => {
+  const { darkMode } = useDarkMode();
+  const [filter, setFilter] = useState('All');
+
+  const allSkills = [
+    { src: html, alt: "Html", label: "Html", category: "Frontend" },
+    { src: css, alt: "Css", label: "Css", category: "Frontend" },
+    { src: tailwind, alt: "Tailwind CSS", label: "Tailwind CSS", category: "UI Framework" },
+    { src: antd, alt: "Ant Design", label: "Ant Design", category: "UI Framework" },
+    { src: shadcn, alt: "Shadcn", label: "Shadcn", category: "UI Framework" },
+    { src: js, alt: "Javascript", label: "Javascript", category: "Frontend" },
+    { src: react, alt: "ReactJS", label: "React.js", category: "Frontend" },
+    { src: redux, alt: "Redux", label: "Redux", category: "Frontend" },
+    { src: redux, alt: "Redux Toolkit", label: "Redux Toolkit", category: "Frontend" },
+    { src: typescript, alt: "Typescript", label: "Typescript", category: "Frontend" },
+    { src: next, alt: "NextJS", label: "Next.js", category: "Frontend" },
+    { src: node, alt: "NodeJs", label: "Node.js", category: "Backend" },
+    { src: express, alt: "ExpressJs", label: "Express.js", category: "Backend", style: { width: '57px', marginTop: '26px' } },
+    { src: mongodb, alt: "MongoDB", label: "MongoDB", category: "Database", style: { width: '27px' } },
+    { src: github, alt: "Github", label: "Github", category: "Tools" },
+    { src: bitbucket, alt: "Bitbucket", label: "Bitbucket", category: "Tools", style: { marginTop: '6px' }},
+    { src: npm, alt: "NPM", label: "NPM", category: "Tools" },
+    { src: postman, alt: "Postman", label: "Postman", category: "Tools" },
+    { src: socket, alt: "Socket.io", label: "Socket.io", category: "Tools" },
+    { src: docker, alt: "Docker", label: "Docker", category: "DevOps", style: { width: '55px', marginBottom: '10px' }},
+    { src: aws, alt: "AWS", label: "AWS", category: "DevOps", style: { marginTop: '28px' }},
+    { src: jira, alt: "Jira", label: "Jira", category: "Tools" }
+];
+
+
+  const filteredSkills = useMemo(() => {
+    return filter === 'All' ? allSkills : allSkills.filter(skill => skill.category === filter);
+  }, [filter]);
+
+  const tabItems = [
+    { key: 'All', label: 'All' },
+    { key: 'Frontend', label: 'Frontend' },
+    { key: 'UI Framework', label: 'UI Framework' },
+    { key: 'Backend', label: 'Backend' },
+    { key: 'Database', label: 'Database' },
+    { key: 'Tools', label: 'Tools' },
+    { key: 'DevOps', label: 'DevOps' }
+  ];
+
   return (
-    <section id="skills">
-      <h2 className="heading">My <span>Skills</span></h2>
-      <div className="skills-container">
-        <div className="skills-card">
-          {[
-            { src: html, alt: "Html", label: "Html" },
-            { src: css, alt: "Css", label: "Css" },
-            { src: sass, alt: "Sass", label: "Sass" },
-            { src: bootstrap, alt: "Bootstrap", label: "Bootstrap" },
-            { src: chakra, alt: "Chakra UI", label: "Chakra UI" },
-            { src: js, alt: "Javascript", label: "Javascript" },
-            { src: react, alt: "ReactJS", label: "React.js" },
-            { src: redux, alt: "Redux", label: "Redux" },
-            { src: typescript, alt: "Typescript", label: "Typescript" },
-            { src: node, alt: "NodeJs", label: "Node.js" },
-            { src: express, alt: "ExpressJs", label: "Express.js",style: {width: '57px',marginTop:"26px"} },
-            { src: sql, alt: "MySQL", label: "MySQL" },
-            { src: mongodb, alt: "MongoDB", label: "MongoDB", style: {width: '27px'} },
-            { src: github, alt: "Github", label: "Github" },
-            { src: npm, alt: "NPM", label: "NPM" },
-            { src: vercel, alt: "Vercel", label: "Vercel" },
-          ].map((tech, index) => (
-            <div key={index}>
-              <img src={tech.src} alt={tech.alt} style={tech.style || {}} className="skills-card-img"/><h4 className="skills-card-name">{tech.label}</h4>
-            </div>
+    <section id="skills" className={`w-full min-h-[94vh] py-4 px-4 sm:px-6 md:px-10 lg:px-[4%] ${darkMode ? 'bg-[#1a1a1a]' : ''}`}>
+      <h2 className={`text-4xl font-bold text-center mb-8 ${darkMode ? 'text-white' : 'text-black'}`}>
+        My <span className="text-yellow-500">Skills</span>
+      </h2>
+      <div className="flex flex-col h-full">
+        <div className="flex flex-wrap justify-center gap-3 md:mb-10 mb-6">
+          {tabItems.map((tab) => (
+            <button
+              key={tab.key}
+              onClick={() => setFilter(tab.key)}
+              className={`group relative capitalize font-bold text-sm px-4 py-2 transition-all duration-300 leading-none 
+                ${filter === tab.key ? 'text-[#ffbf00]' : `${darkMode ? 'text-white' : 'text-black'}`} hover:text-[#ffbf00]`}
+            >
+              <span className="relative z-10">{tab.label}</span>
+              <span
+                className={`absolute left-1/2 bottom-0 h-[1.5px] bg-[#ffbf00] transform -translate-x-1/2 transition-all duration-300 
+                  ${filter === tab.key ? 'w-[70%] md:w-[80%]' : 'w-0 group-hover:w-[70%] md:group-hover:w-[80%]'}`}
+              />
+            </button>
+          ))}
+        </div>
+        <div className="w-[90%] mx-auto flex flex-wrap justify-center gap-4 sm:gap-10 mt-3">
+          {filteredSkills.map((tech, index) => (
+            <Tooltip title={tech.label} key={index} placement="top">
+              <div className="w-1/3 sm:w-1/4 md:w-1/5 lg:w-1/12 text-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:-translate-y-2 cursor-pointer">
+                <img
+                  src={tech.src}
+                  alt={tech.alt}
+                  style={tech.style || {}}
+                  className={`mx-auto mb-2 transition-all duration-300 ${!tech.style?.width ? "w-[60px]" : ""}`}
+                />
+                <h4 className={`text-sm font-medium ${darkMode ? 'text-white' : 'text-black'}`}>
+                  {tech.label}
+                </h4>
+              </div>
+            </Tooltip>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Skills;
