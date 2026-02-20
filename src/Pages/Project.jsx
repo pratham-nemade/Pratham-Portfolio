@@ -1,9 +1,58 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
 import time from '../images/time.png';
+import CodeXia from '../images/CodeXia.png';
 import { useDarkMode } from '../context/DarkModeContext';
 
 const projects = [
+  {
+    id: 1,
+    image: CodeXia,
+    title: "CodeXia - Real-Time Collaborative Coding Platform",
+    description:
+      "CodeXia is a production-ready real-time collaborative coding platform built with the MERN stack. It enables multiple users to write, execute, and manage code simultaneously while offering AI assistance, secure authentication, and a live frontend playground similar to CodePen. The platform is designed with scalability, performance optimization, and real-time architecture in mind.",
+
+    features: [
+      "Real-time multi-user collaborative editing using Socket.IO.",
+      "Instant in-app notifications for collaboration events and file activities.",
+      "Multi-language backend code execution with dynamic processing.",
+      "CodePen-style HTML, CSS, and JavaScript live playground with instant preview.",
+      "Support for external CSS and JavaScript CDN integration.",
+      "Collaborative frontend editing with synchronized rendering output.",
+      "AI-powered coding assistance integrated via Groq API.",
+      "JWT-based authentication with OTP email verification.",
+      "Structured project and file management system.",
+      "Redis caching for improved performance and scalability."
+    ],
+
+    techStack:
+      "React.js, Redux Toolkit, Tailwind CSS, ShadCN UI, Node.js, Express.js, MongoDB, Redis, Socket.IO, JWT, REST APIs, Groq API",
+
+    links: {
+      github: "https://github.com/pratham-nemade/Codexia",
+      live: "https://codexia-final.vercel.app/"
+    }
+  },
+  {
+    id: 1,
+    image: time,
+    title: 'Time Clone',
+    description:
+      "The Time Clone project is a pixel-perfect replica of Time.com, focusing on crafting a user interface that mirrors the original site's aesthetics. It demonstrates advanced responsiveness, pixel-perfect layout, and a clean file structure.",
+    features: [
+      'Advanced responsiveness across devices.Advanced responsiveness across devices.Advanced responsiveness across devices.Advanced responsiveness across devices.Advanced responsiveness across devices.',
+      'Pixel-perfect UI alignment.',
+      'Mobile, tablet & desktop optimized.',
+      'Clean and organized file structure.',
+      'Sass modularization for easier styling.',
+    ],
+    techStack: 'HTML, CSS, Bootstrap, Sass',
+    links: {
+      github: 'https://github.com/pratham1916/Time-Clone',
+      live: 'https://time-clone.netlify.app/',
+    },
+  },
+
 ];
 
 function Project() {
