@@ -30,11 +30,11 @@ const projects = [
 
     links: {
       github: "https://github.com/pratham-nemade/Codexia",
-      live: "https://codexia-final.vercel.app/"
+      live: "https://codexia-final.vercel.app"
     }
   },
   {
-    id: 1,
+    id: 2,
     image: time,
     title: 'Time Clone',
     description:
