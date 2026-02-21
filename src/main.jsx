@@ -16,3 +16,4 @@ window.addEventListener("load", () => {
     setTimeout(() => loader.remove(), 700)
   }
 })
+
