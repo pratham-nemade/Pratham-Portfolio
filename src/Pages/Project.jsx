@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
-import time from '../images/time.png';
-import CodeXia from '../images/CodeXia.png';
+import time from '../Images/time.png';
+import CodeXia from '../Images/CodeXia.png';
 import { useDarkMode } from '../context/DarkModeContext';
 
 const projects = [
