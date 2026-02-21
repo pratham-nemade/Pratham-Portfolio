@@ -1,27 +1,27 @@
 import { Typewriter } from 'react-simple-typewriter';
 import { useDarkMode } from '../context/DarkModeContext';
 
-import html from "../Images/html.png";
-import css from "../Images/css.png";
-import tailwind from "../Images/tailwind.png";
-import antd from "../Images/ant-design.svg";
-import shadcn from "../Images/shadcn.png";
-import js from "../Images/js.png";
-import react from "../Images/reactjs.png";
-import redux from "../Images/redux.png";
-import typescript from "../Images/typescript.png";
-import next from "../Images/nextjs.svg";
-import node from "../Images/nodejs.png";
-import express from "../Images/express.png";
-import mongodb from "../Images/mongoDB.png";
-import github from "../Images/github.png";
-import bitbucket from "../Images/bitbucket.svg";
-import npm from "../Images/npm.png";
-import postman from "../Images/postman.svg";
-import socket from "../Images/socket-io.svg";
-import docker from "../Images/docker.svg";
-import aws from "../Images/aws.svg";
-import jira from "../Images/jira.svg";
+import html from "../images/html.png";
+import css from "../images/css.png";
+import tailwind from "../images/tailwind.png";
+import antd from "../images/ant-design.svg";
+import shadcn from "../images/shadcn.png";
+import js from "../images/js.png";
+import react from "../images/reactjs.png";
+import redux from "../images/redux.png";
+import typescript from "../images/typescript.png";
+import next from "../images/nextjs.svg";
+import node from "../images/nodejs.png";
+import express from "../images/express.png";
+import mongodb from "../images/mongoDB.png";
+import github from "../images/github.png";
+import bitbucket from "../images/bitbucket.svg";
+import npm from "../images/npm.png";
+import postman from "../images/postman.svg";
+import socket from "../images/socket-io.svg";
+import docker from "../images/docker.svg";
+import aws from "../images/aws.svg";
+import jira from "../images/jira.svg";
 
 const orbit1 = [html, css, tailwind, antd, shadcn, js, react];
 const orbit2 = [redux, typescript, next, node, express, socket, mongodb];
@@ -76,7 +76,7 @@ const Home = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
           <a
-            href="/resume.pdf"
+            href="/Pratham-Nemade-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white bg-[#ffbf00] hover:bg-black dark:hover:bg-white dark:hover:text-black transition duration-300 font-semibold py-2 px-6 rounded-full shadow"
@@ -93,7 +93,7 @@ const Home = () => {
               <i className="bx bxl-linkedin-square text-xl"></i>
             </a>
             <a
-              href="https://github.com/pratham1916"
+              href="https://github.com/pratham-nemade"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full text-white bg-[#ffbf00] hover:bg-black dark:hover:bg-white dark:hover:text-black transition duration-300"

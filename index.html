@@ -1,17 +1,113 @@
 <!doctype html>
-<html lang="en" class="">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/Images/resume.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/7a1ef31398.js" crossorigin="anonymous"></script>
-    <title>Pratham Nemade</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/images/resume.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7a1ef31398.js" crossorigin="anonymous"></script>
+  <title>Pratham Nemade</title>
+</head>
+
+<body>
+  <div id="global-loader">
+    <div class="loader-box">
+      <span class="brand-text">Pratham&nbsp;Nemade</span>
+      <div class="accent-line"></div>
+    </div>
+  </div>
+
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+  <style>
+    #global-loader {
+      position: fixed;
+      inset: 0;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.7s ease, visibility 0.7s ease;
+    }
+
+    .loader-box {
+      text-align: center;
+      width: 320px;
+    }
+
+    .brand-text {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      white-space: nowrap;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(90deg, #111, #ffbe01, #111);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 3s linear infinite, fadeIn 1.2s ease forwards;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 200% center;
+      }
+
+      100% {
+        background-position: -200% center;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .accent-line {
+      margin: 26px auto 0;
+      height: 2px;
+      width: 100%;
+      background: #fff7e0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .accent-line::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 35%;
+      background: linear-gradient(90deg, transparent, #ffbe01, transparent);
+      animation: slide 1.6s ease-in-out infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        left: -35%;
+      }
+
+      100% {
+        left: 100%;
+      }
+    }
+
+    .fade-out {
+      opacity: 0;
+      visibility: hidden;
+    }
+  </style>
+</body>
+
 </html>
