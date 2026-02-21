@@ -17,7 +17,7 @@ import {
   Legend,
   Dot,
 } from 'recharts';
-import PrathamImage from "../images/pratham.jpg";
+import PrathamImage from "../assets/pratham.jpg";
 
 const timelineData = [
   {
