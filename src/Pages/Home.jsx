@@ -51,11 +51,11 @@ const Home = () => {
         >
           <Typewriter
             words={[
-              'Full Stack Web Developer',
-              'MERN Stack Enthusiast',
-              'Lifelong Learner & Tech Explorer',
-              'Performance-Focused Engineer',
-              'User-Centric Developer',
+              'Full Stack Developer',
+              'React & Node.js Engineer',
+              'MERN Stack Developer',
+              'SaaS Product Developer',
+              'Real-Time App Builder',
             ]}
             loop={0}
             cursor
@@ -67,11 +67,14 @@ const Home = () => {
         </h2>
         <p
           id="user-detail-intro"
-          className={`text-base sm:text-lg md:text-xl mb-4 ${
+          className={`text-base sm:text-lg md:text-lg mb-4 ${
             darkMode ? 'text-gray-300' : 'text-gray-700'
           }`}
         >
-          I'm a Full Stack Developer skilled in React.js, Next.js, Node.js, Express.js, and Tailwind CSS. I specialize in building scalable, user-centric web apps with a focus on performance, clean architecture, and smooth user experiences.
+          I'm a Full Stack Developer with 2+ years of experience shipping React applications
+          at a US-based SaaS company. I build across the MERN stack, from component
+          architecture and state management on the frontend, to REST APIs and database
+          design on the backend.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
@@ -79,6 +82,14 @@ const Home = () => {
             href="/Pratham-Nemade-Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open('/Pratham-Nemade-Resume.pdf', '_blank');
+              const link = document.createElement('a');
+              link.href = '/Pratham-Nemade-Resume.pdf';
+              link.download = 'Pratham-Nemade-Resume.pdf';
+              link.click();
+            }}
             className="text-white bg-[#ffbf00] hover:bg-black dark:hover:bg-white dark:hover:text-black transition duration-300 font-semibold py-2 px-6 rounded-full shadow"
           >
             View Resume

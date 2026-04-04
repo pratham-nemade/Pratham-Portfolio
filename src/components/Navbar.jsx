@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useDarkMode } from '../context/DarkModeContext';
 
 const Navbar = () => {
@@ -108,6 +108,23 @@ const Navbar = () => {
               />
             </a>
           ))}
+          <a
+            href="/Pratham-Nemade-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open('/Pratham-Nemade-Resume.pdf', '_blank');
+              const link = document.createElement('a');
+              link.href = '/Pratham-Nemade-Resume.pdf';
+              link.download = 'Pratham-Nemade-Resume.pdf';
+              link.click();
+            }}
+            className="group relative capitalize font-bold text-sm px-3 py-1.5 transition-all duration-300 leading-none md:text-black text-black dark:md:text-white dark:text-white hover:text-[#ffbf00] dark:hover:text-[#ffbf00]"
+          >
+            <span className="relative z-10">resume</span>
+            <span className="absolute left-1/2 bottom-0 h-[2px] bg-[#ffbf00] transform -translate-x-1/2 transition-all duration-300 w-0 group-hover:w-[10%] md:group-hover:w-[80%]" />
+          </a>
           <div className="flex justify-center items-center gap-3 mt-4 md:hidden">
             <CTAButton scrollToSection={scrollToSection} />
           </div>
@@ -133,7 +150,7 @@ const Navbar = () => {
 
 const CTAButton = ({ scrollToSection }) => (
   <a href="#contact" onClick={scrollToSection} className="px-3 md:px-4 py-1 md:py-2 text-[14px] font-semibold rounded-full bg-[#ffbf00] text-white hover:bg-black dark:hover:bg-white dark:hover:text-black transition-all duration-300">
-    Let’s Connect
+    Let's Connect
   </a>
 );
 

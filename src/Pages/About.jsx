@@ -49,9 +49,11 @@ const timelineData = [
     institution: 'Sunbase',
     duration: 'Oct 2024 - Present',
     description: [
-      'As a key member of the frontend development team at Sunbase, I have been responsible for designing and building scalable and user-friendly web applications. I have focused on ensuring seamless user experiences across various platforms and devices',
-      'Designed and implemented responsive UI/UX features, enhancing the overall user experience across devices.',
-      'Collaborated with cross-functional teams (backend, design, and product) to deliver new features and resolve issues in a timely manner.',
+      'Sole frontend developer on a fully configurable AI chatbot platform built with vanilla JavaScript and Gemini API, deployed as an embeddable script across 30+ client websites.',
+      'Built a real-time analytics dashboard using ECharts to visualize chatbot performance metrics for 20+ clients, cutting support requests for usage data by ~50%.',
+      'Architected a single reusable CRM widget component that renders 100+ widgets tracking sales, revenue, and leads — reducing per-widget build time by ~65%.',
+      'Replaced manual client onboarding calls with a self-serve guided flow in React.js and Tailwind CSS, saving 3–4 hours of internal team time per client onboarded.',
+      'Shipped features consistently across sprint cycles through close collaboration with backend developers and designers, maintaining code quality via regular reviews.',
     ],
     icon: <FaLaptopCode />,
   },
@@ -80,24 +82,28 @@ const About = () => {
       <h1 className={`text-3xl sm:text-4xl font-bold text-center mb-14 ${darkMode ? 'text-white' : 'text-black'}`}>
         About <span className="text-yellow-500">Me</span>
       </h1>
-      
+
 
       <div className="flex flex-col lg:flex-row items-start justify-between gap-10 mb-16">
         <div className="w-full lg:w-[70%] space-y-5">
           <p className={`${darkMode ? 'text-gray-300' : 'text-black'} text-base sm:text-[16px] leading-relaxed`}>
-            Hi, I’m Pratham — a passionate Frontend Developer with strong proficiency across the MERN stack, and a B.Tech graduate in Information Technology. My time at college was not just about earning a degree, but about building a solid foundation in core computer science concepts such as data structures & algorithms, database management systems, operating systems, networking, and software engineering principles. I also gained hands-on experience with modern web technologies, which sparked my interest in crafting user-friendly, high-performance applications.
+            Hi, I'm Pratham — a Full Stack Developer with 2 years of experience building and shipping React applications in production at a US-based SaaS company. I hold a B.Tech in Information Technology from Priyadarshini College of Engineering, Nagpur, where I built a strong foundation in data structures, database systems, and software engineering principles.
           </p>
+
           <p className={`${darkMode ? 'text-gray-300' : 'text-black'} text-base sm:text-[16px] leading-relaxed`}>
-            With over a year of professional experience, I have built fast, scalable, and user-focused applications using React.js, TypeScript, Tailwind CSS, Next.js, Node.js, Express.js, and MongoDB. My approach emphasizes clean, maintainable code, intuitive UX, and performance optimization.
+            At Sunbase, I work as the sole frontend developer — owning end-to-end delivery of features like an AI chatbot platform deployed across 30+ client websites, a real-time analytics dashboard serving 20+ clients, and a global CRM widget architecture that reduced per-widget build time by ~65%. I collaborate closely with backend developers and designers across sprint cycles to ship consistently and maintain code quality.
           </p>
+
           <p className={`${darkMode ? 'text-gray-300' : 'text-black'} text-base sm:text-[16px] leading-relaxed`}>
-            One of my most rewarding projects was designing and developing a full-stack collaborative code editor from scratch, handling both frontend and backend independently. This strengthened my technical skills, system design thinking, and ability to deliver complete product features under tight timelines.
+            Outside of work, I built CodeXia — a real-time collaborative coding platform supporting 10+ concurrent users, a sandboxed multi-language code execution engine, and AI-powered in-editor assistance via the Groq API. It's the project I'm most proud of, as it required me to design and ship a complete product independently — from system architecture to deployment.
           </p>
+
           <p className={`${darkMode ? 'text-gray-300' : 'text-black'} text-base sm:text-[16px] leading-relaxed`}>
-            While my expertise lies in frontend engineering, I actively expand my backend and infrastructure skills — from building scalable APIs to implementing DevOps workflows, automating CI/CD pipelines, and managing cloud deployments for efficient delivery.
+            My core stack is React.js, TypeScript, Node.js, Express.js, MongoDB, and Tailwind CSS — but I'm comfortable across the full MERN stack and have hands-on experience with Redis, WebSockets, Docker, and AWS. I care deeply about component architecture, clean API design, and building things that are fast and maintainable.
           </p>
+
           <p className={`${darkMode ? 'text-gray-300' : 'text-black'} text-base sm:text-[16px] leading-relaxed`}>
-            I’m driven by ownership, innovation, and impact. My long-term goal is to grow into a Senior Developer role, leading high-performance teams in product-first tech companies. I enjoy working with equally passionate, growth-oriented professionals who are committed to solving real-world problems with technology — and I strive to make every project I work on not just functional, but exceptional.
+            I'm looking to grow into a senior engineering role where I can take on greater ownership, contribute to product decisions, and work alongside people who care about building things that actually matter.
           </p>
         </div>
 
@@ -166,7 +172,7 @@ const About = () => {
               background: darkMode ? '#333' : '#fef9c3',
               color: darkMode ? '#fff' : '#000',
               padding: '0.8rem',
-              height: '220px', 
+              height: '220px',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'flex-start',
@@ -186,7 +192,7 @@ const About = () => {
 
               style={{
                 maxHeight: '130px',
-                scrollbarWidth: 'none', 
+                scrollbarWidth: 'none',
               }}
             >
               <style jsx>{`

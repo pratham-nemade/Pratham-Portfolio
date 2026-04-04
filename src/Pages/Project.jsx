@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Modal } from 'antd';
 import time from '../assets/time.png';
 import CodeXia from '../assets/CodeXia.png';
+import ZestForm from '../assets/ZestForm.png';
+import GeoData from '../assets/GeoData.png';
 import { useDarkMode } from '../context/DarkModeContext';
 
 const projects = [
@@ -10,23 +12,21 @@ const projects = [
     image: CodeXia,
     title: "CodeXia - Real-Time Collaborative Coding Platform",
     description:
-      "CodeXia is a production-ready real-time collaborative coding platform built with the MERN stack. It enables multiple users to write, execute, and manage code simultaneously while offering AI assistance, secure authentication, and a live frontend playground similar to CodePen. The platform is designed with scalability, performance optimization, and real-time architecture in mind.",
+      "CodeXia is a full-stack real-time collaborative coding platform built independently across both frontend and backend. It supports multi-user code editing, sandboxed code execution in multiple languages, AI-powered in-editor assistance, and a live frontend playground — designed with real-time architecture, performance, and scalability at its core.",
 
     features: [
-      "Real-time multi-user collaborative editing using Socket.IO.",
-      "Instant in-app notifications for collaboration events and file activities.",
-      "Multi-language backend code execution with dynamic processing.",
-      "CodePen-style HTML, CSS, and JavaScript live playground with instant preview.",
-      "Support for external CSS and JavaScript CDN integration.",
-      "Collaborative frontend editing with synchronized rendering output.",
-      "AI-powered coding assistance integrated via Groq API.",
+      "Real-time collaborative code editor using Socket.io, supporting 10+ concurrent users with conflict-free synchronization.",
+      "Sandboxed code execution engine supporting JavaScript, Python, and C++ with isolated runtimes and a 10-second timeout to prevent resource abuse.",
+      "AI-powered coding assistance via Groq API, keeping developers in flow without switching to external tools — saving an estimated 10–15 minutes per session.",
+      "Hybrid notification pipeline delivering in-app and email alerts for code execution results, file changes, and collaboration events.",
+      "CodePen-style live frontend playground with support for external CSS and JS CDN integration.",
       "JWT-based authentication with OTP email verification.",
-      "Structured project and file management system.",
-      "Redis caching for improved performance and scalability."
+      "Redis caching for performance optimization and scalability.",
+      "Responsive, modern UI built with Tailwind CSS and Shadcn UI.",
     ],
 
     techStack:
-      "React.js, Redux Toolkit, Tailwind CSS, ShadCN UI, Node.js, Express.js, MongoDB, Redis, Socket.IO, JWT, REST APIs, Groq API",
+      "React.js, Redux Toolkit, Tailwind CSS, ShadCN UI, Node.js, Express.js, MongoDB, Redis, Socket.IO, JWT, REST APIs, Groq API, ECharts",
 
     links: {
       github: "https://github.com/pratham-nemade/Codexia",
@@ -35,6 +35,46 @@ const projects = [
   },
   {
     id: 2,
+    image: GeoData,
+    title: "Geo-Data - Geospatial Data Management App",
+    description:
+      "Geo-Data is a full-stack web application for uploading, visualizing, and managing geospatial data. It stands out for its Go backend paired with a React.js frontend — an unconventional stack that demonstrates cross-technology adaptability. Users can work with GeoJSON and KML files, render them on an interactive map, and draw custom shapes directly on the map.",
+    features: [
+      "Upload and visualize GeoJSON and KML files on an interactive map powered by React Leaflet.",
+      "Draw, save, and edit custom shapes directly on the map for personalized geospatial data management.",
+      "Secure user authentication with signup and login flows.",
+      "PostgreSQL database integration for persistent data storage.",
+      "Go-powered backend for efficient server-side processing.",
+      "Fully responsive design across devices.",
+    ],
+    techStack: "React.js, Go, PostgreSQL, React Leaflet",
+    links: {
+      github: "https://github.com/pratham-nemade/Geo-Data",
+      live: "https://geo-data-app.netlify.app",
+    },
+  },
+  {
+    id: 3,
+    image: ZestForm,
+    title: "ZestForm - Drag-and-Drop Form Builder",
+    description:
+      "ZestForm is a visual form designer that dynamically renders forms from JSON data. Built entirely with vanilla JavaScript, it lets users construct, reorder, and customize form elements in real time — with no frameworks or dependencies.",
+    features: [
+      "Drag-and-drop reordering of form elements for full layout control.",
+      "Add any number of inputs, selects, and textareas dynamically to the form.",
+      "Inline editing of labels, placeholders, and select options for each element.",
+      "Delete individual form elements as needed.",
+      "Save button logs the complete updated JSON structure to the console.",
+      "Fully responsive UI across mobile, tablet, and desktop screen sizes.",
+    ],
+    techStack: "HTML, CSS, JavaScript",
+    links: {
+      github: "https://github.com/pratham-nemade/ZestForm",
+      live: "https://zestform.netlify.app",
+    },
+  },
+  {
+    id: 3,
     image: time,
     title: 'Time Clone',
     description:
@@ -48,7 +88,7 @@ const projects = [
     ],
     techStack: 'HTML, CSS, Bootstrap, Sass',
     links: {
-      github: 'https://github.com/pratham1916/Time-Clone',
+      github: 'https://github.com/pratham-nemade/Time-Clone',
       live: 'https://time-clone.netlify.app/',
     },
   },

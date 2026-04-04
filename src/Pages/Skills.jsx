@@ -22,6 +22,40 @@ import socket from "../assets/socket-io.svg";
 import docker from "../assets/docker.svg";
 import aws from "../assets/aws.svg";
 import jira from "../assets/jira.svg";
+import { FaUsers, FaLightbulb, FaPuzzlePiece, FaCheckCircle, FaSyncAlt, FaComments } from 'react-icons/fa';
+
+const softSkills = [
+  {
+    icon: <FaCheckCircle size={32} />,
+    label: "Ownership & Accountability",
+    description: "Operated as sole frontend dev at Sunbase, taking end-to-end responsibility for feature delivery.",
+  },
+  {
+    icon: <FaUsers size={32} />,
+    label: "Cross-functional Collaboration",
+    description: "Worked closely with backend developers and designers across sprint cycles to ship consistently.",
+  },
+  {
+    icon: <FaSyncAlt size={32} />,
+    label: "Agile & Scrum Delivery",
+    description: "Shipped features consistently across sprint cycles with regular code reviews and iterations.",
+  },
+  {
+    icon: <FaPuzzlePiece size={32} />,
+    label: "Problem Solving",
+    description: "Independently designed and built CodeXia end-to-end, handling system architecture and real-time complexity.",
+  },
+  {
+    icon: <FaLightbulb size={32} />,
+    label: "Initiative & Innovation",
+    description: "Proactively replaced manual onboarding calls with a self-serve flow, saving 3–4 hours per client.",
+  },
+  {
+    icon: <FaComments size={32} />,
+    label: "Clear Communication",
+    description: "Translated product requirements into technical solutions through close collaboration with stakeholders.",
+  },
+];
 
 const Skills = () => {
   const { darkMode } = useDarkMode();
@@ -43,15 +77,14 @@ const Skills = () => {
     { src: express, alt: "ExpressJs", label: "Express.js", category: "Backend", style: { width: '57px', marginTop: '26px' } },
     { src: mongodb, alt: "MongoDB", label: "MongoDB", category: "Database", style: { width: '27px' } },
     { src: github, alt: "Github", label: "Github", category: "Tools" },
-    { src: bitbucket, alt: "Bitbucket", label: "Bitbucket", category: "Tools", style: { marginTop: '6px' }},
+    { src: bitbucket, alt: "Bitbucket", label: "Bitbucket", category: "Tools", style: { marginTop: '6px' } },
     { src: npm, alt: "NPM", label: "NPM", category: "Tools" },
     { src: postman, alt: "Postman", label: "Postman", category: "Tools" },
     { src: socket, alt: "Socket.io", label: "Socket.io", category: "Tools" },
-    { src: docker, alt: "Docker", label: "Docker", category: "DevOps", style: { width: '55px', marginBottom: '10px' }},
-    { src: aws, alt: "AWS", label: "AWS", category: "DevOps", style: { marginTop: '28px' }},
-    { src: jira, alt: "Jira", label: "Jira", category: "Tools" }
-];
-
+    { src: docker, alt: "Docker", label: "Docker", category: "DevOps", style: { width: '55px', marginBottom: '10px' } },
+    { src: aws, alt: "AWS", label: "AWS", category: "DevOps", style: { marginTop: '28px' } },
+    { src: jira, alt: "Jira", label: "Jira", category: "Tools" },
+  ];
 
   const filteredSkills = useMemo(() => {
     return filter === 'All' ? allSkills : allSkills.filter(skill => skill.category === filter);
@@ -64,7 +97,7 @@ const Skills = () => {
     { key: 'Backend', label: 'Backend' },
     { key: 'Database', label: 'Database' },
     { key: 'Tools', label: 'Tools' },
-    { key: 'DevOps', label: 'DevOps' }
+    { key: 'DevOps', label: 'DevOps' },
   ];
 
   return (
@@ -107,6 +140,34 @@ const Skills = () => {
           ))}
         </div>
       </div>
+      <div className="mt-10">
+        <h2 className={`text-4xl font-bold text-center mb-10 ${darkMode ? 'text-white' : 'text-black'}`}>
+          Soft <span className="text-yellow-500">Skills</span>
+        </h2>
+        <div className="w-[90%] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {softSkills.map((skill, index) => (
+            <div
+              key={index}
+              className={`flex items-start gap-4 p-5 rounded-xl border transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 cursor-pointer
+                ${darkMode
+                  ? 'bg-[#242424] border-[#333] hover:border-[#ffbf00]'
+                  : 'bg-white border-gray-200 hover:border-[#ffbf00] shadow-sm'
+                }`}
+            >
+              <div className="text-[#ffbf00] mt-1 shrink-0">{skill.icon}</div>
+              <div>
+                <h4 className={`text-base font-semibold mb-1 ${darkMode ? 'text-white' : 'text-black'}`}>
+                  {skill.label}
+                </h4>
+                <p className={`text-sm leading-relaxed ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                  {skill.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </section>
   );
 };
