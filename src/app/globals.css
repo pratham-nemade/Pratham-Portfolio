@@ -1,0 +1,186 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+@custom-variant tall (@media (min-height: 860px));
+
+:root {
+  --hue: 298;
+  --chroma: 0.13;
+
+  --background: oklch(0.975 0.008 var(--hue));
+  --foreground: oklch(0.28 0.025 var(--hue));
+  --card: oklch(0.99 0.005 var(--hue));
+  --card-foreground: var(--foreground);
+  --popover: oklch(0.99 0.005 var(--hue));
+  --popover-foreground: var(--foreground);
+  --primary: oklch(0.45 var(--chroma) var(--hue));
+  --primary-foreground: oklch(0.98 0.01 var(--hue));
+  --secondary: oklch(0.945 0.014 var(--hue));
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.945 0.014 var(--hue));
+  --muted-foreground: oklch(0.5 0.022 var(--hue));
+  --accent: oklch(0.93 0.028 var(--hue));
+  --accent-foreground: oklch(0.34 0.05 var(--hue));
+  --destructive: oklch(0.56 0.16 25);
+  --destructive-foreground: oklch(0.98 0.01 25);
+  --border: oklch(0.9 0.014 var(--hue));
+  --input: oklch(0.87 0.016 var(--hue));
+  --ring: oklch(0.45 var(--chroma) var(--hue));
+
+  --glow: oklch(0.85 calc(var(--chroma) * 1.2) var(--hue) / 45%);
+  --shadow-soft:
+    0 1px 2px oklch(0.28 0.025 var(--hue) / 5%),
+    0 8px 24px -12px oklch(0.28 0.025 var(--hue) / 12%);
+
+  --radius: 0;
+  --tracking-normal: -0.006em;
+}
+
+.dark {
+  --background: oklch(0.19 0.014 var(--hue));
+  --foreground: oklch(0.92 0.014 var(--hue));
+  --card: oklch(0.22 0.016 var(--hue));
+  --popover: oklch(0.24 0.017 var(--hue));
+  --primary: oklch(0.76 calc(var(--chroma) * 1.1) var(--hue));
+  --primary-foreground: oklch(0.2 0.02 var(--hue));
+  --secondary: oklch(0.26 0.016 var(--hue));
+  --muted: oklch(0.26 0.016 var(--hue));
+  --muted-foreground: oklch(0.7 0.02 var(--hue));
+  --accent: oklch(0.29 0.03 var(--hue));
+  --accent-foreground: oklch(0.88 0.04 var(--hue));
+  --destructive: oklch(0.68 0.15 25);
+  --border: oklch(0.3 0.016 var(--hue));
+  --input: oklch(0.33 0.018 var(--hue));
+  --ring: oklch(0.76 calc(var(--chroma) * 1.1) var(--hue));
+
+  --glow: oklch(0.45 calc(var(--chroma) * 1.2) var(--hue) / 35%);
+  --shadow-soft:
+    0 1px 2px oklch(0 0 0 / 20%), 0 10px 30px -14px oklch(0 0 0 / 45%);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-urbanist), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+
+  --shadow-soft: var(--shadow-soft);
+
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+  --radius-3xl: 0;
+  --radius-4xl: 0;
+}
+
+@utility hero-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black 35%, transparent 90%);
+}
+
+@utility blueprint-grid {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklch, var(--border) 60%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklch, var(--border) 60%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 28px 28px;
+}
+
+@utility hero-glow {
+  background:
+    radial-gradient(60% 50% at 20% 10%, var(--glow), transparent 70%),
+    radial-gradient(40% 40% at 90% 30%, var(--glow), transparent 70%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"],
+  [role="option"],
+  [role="menuitem"],
+  [role="switch"],
+  [data-slot="select-trigger"],
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+  body {
+    @apply bg-background font-sans text-foreground;
+    letter-spacing: var(--tracking-normal);
+    line-height: 1.65;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  html,
+  body,
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  *::-webkit-scrollbar {
+    display: none;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--primary) 25%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
